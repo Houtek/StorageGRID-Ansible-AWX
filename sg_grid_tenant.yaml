@@ -4,7 +4,7 @@
   tasks:
   - name: Get user authorization token
     uri:
-      url: "{{ grid_admin_base_url }}api/v3/authorize"
+      url: "{{ grid_admin_base_url }}/api/v3/authorize"
       method: POST
       body: {
         "username": "{{ grid_user }}",
@@ -33,4 +33,4 @@
       use_own_identity_source: true
       allow_platform_services: false
       password: netapp01
-      quota_bytes: 1000000000000
+      quota_size: 0
